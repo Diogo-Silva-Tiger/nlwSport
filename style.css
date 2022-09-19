@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;   
+    line-height: 160%;
+}
+
+ul{
+    list-style: none;
+}
+
+body {
+    background-image: url(./imagens/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+/* main * { 
+     border: 1px solid red; 
+}
+*/
+
+header {
+    padding-top: 32px;
+    margin-bottom: 100px;
+    height: calc(120px + 32px);
+}
+
+header div {
+    width: 200px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43E7AD 50.52%, #E2D45c 100%);
+
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1); 
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+    /* border: 4px solid red; */
+
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43E7AD 50.52%, #E2D45c 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+
+}
+
+section div {
+    background: #2a2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    /* identical to box height, or 26px*/
+    letter-spacing: -0.18px;
+    /* zinc/400 */
+    color:#A1A1AA;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+/* Elemento display e a visibilidade do elementos do site block bloquei todo os elementos de uma linha enquanto o inline nao, 
+temos dois tipos de display o que esta embaixo dela e as caixas que ficam dentro de outras caixas
+*/
+
+.games-list {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img{
+    border-radius: 50%;
+    width: 70%;
+    border: 1px solid #443E54;
+}
+
+/* Animation */
+
+header div {
+    animation: fromtop .7s .2s backwards;
+    /* animation-delay: 1s; */
+}
+
+main section {
+    animation: frombottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .3s; 
+}
+
+main section:nth-child(3){
+    animation-delay: .6s;
+}
+
+@keyframes fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px)
+       }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes frombottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px)
+       }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
